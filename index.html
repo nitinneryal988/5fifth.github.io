@@ -1,0 +1,42 @@
+o<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> face recognization </title>
+</head>
+<style>
+     body  {
+     	margin:0;
+     	padding:0;
+     	width: 100vw;
+     	height:100vh;
+     	display:flex;
+     	justify-content:center;
+     	align-items:center;
+
+     }
+
+
+
+	</style>
+<body>
+<video  id="video" width="720" height="560"  autoplay muted>           </video>	
+
+
+
+<script>
+  const video = document.getElementById('video')
+
+
+   function startVideo()   {
+     navigator.getUserMedia(   { video:{} },
+     	stream => video.srcObject= stream,
+     	err => console.error(err))
+}
+startVideo()
+
+
+
+	</script>
+</body>
+</html>
